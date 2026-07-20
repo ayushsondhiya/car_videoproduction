@@ -16,6 +16,7 @@ export default function VideoCard({ video, onSelect }: VideoCardProps) {
   const handleMouseEnter = async () => {
     if (videoRef.current) {
       try {
+        videoRef.current.muted = true;
         videoRef.current.currentTime = 0;
         await videoRef.current.play();
         setIsPlaying(true);
