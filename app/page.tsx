@@ -69,7 +69,7 @@ export default function Home() {
           </div>
 
           <p className={styles.heroTagline}>
-            Specialized short-form vertical video production crafting high-retention 9:16 reels, commercials, and brand sales campaigns.
+            Crafting high-impact consumer videos, car delivery celebration reels, and cinematic stock photography tailored for automotive brands.
           </p>
 
           {/* What We Offer Grid */}
@@ -77,33 +77,36 @@ export default function Home() {
             <div className={styles.serviceCard}>
               <div className={styles.serviceIcon}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+                  <circle cx="7" cy="17" r="2" />
+                  <path d="M9 17h6" />
+                  <circle cx="17" cy="17" r="2" />
+                </svg>
+              </div>
+              <h3 className={styles.serviceTitle}>Car Delivery Reels</h3>
+              <p className={styles.serviceDesc}>High-retention consumer celebration videos and vertical delivery reels crafted for new car owners.</p>
+            </div>
+
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                  <circle cx="12" cy="13" r="4" />
+                </svg>
+              </div>
+              <h3 className={styles.serviceTitle}>Cinematic Stock Photos</h3>
+              <p className={styles.serviceDesc}>Ultra-high-resolution automotive photography, aerial drone angles, and premium stock visuals.</p>
+            </div>
+
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polygon points="23 7 16 12 23 17 23 7" />
                   <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
                 </svg>
               </div>
-              <h3 className={styles.serviceTitle}>9:16 Commercial Ads</h3>
-              <p className={styles.serviceDesc}>High-converting vertical commercials designed for maximum first-3-second retention.</p>
-            </div>
-
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
-              </div>
-              <h3 className={styles.serviceTitle}>Brand Sales Campaigns</h3>
-              <p className={styles.serviceDesc}>Promotional video assets tailored to accelerate customer acquisition and product sales.</p>
-            </div>
-
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 20h9" />
-                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-                </svg>
-              </div>
-              <h3 className={styles.serviceTitle}>Editing & Sound Design</h3>
-              <p className={styles.serviceDesc}>Precision color grading, dynamic pacing, keyframe transitions, and custom audio layers.</p>
+              <h3 className={styles.serviceTitle}>Social Sales Campaigns</h3>
+              <p className={styles.serviceDesc}>Custom 9:16 vertical video assets engineered to drive customer engagement and boost dealership sales.</p>
             </div>
           </div>
         </section>
