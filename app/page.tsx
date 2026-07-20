@@ -62,10 +62,49 @@ export default function Home() {
       {/* Main Container */}
       <main className="container">
         
-        {/* Minimal Hero Presentation */}
+        {/* Hero & About Overview Presentation */}
         <section className={styles.hero}>
           <div className={styles.heroLogoSlot}>
             <img src="/logo.png" alt="Apisomi Logo" className={styles.heroLogoImage} />
+          </div>
+
+          <p className={styles.heroTagline}>
+            Specialized short-form vertical video production crafting high-retention 9:16 reels, commercials, and brand sales campaigns.
+          </p>
+
+          {/* What We Offer Grid */}
+          <div className={styles.servicesGrid}>
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polygon points="23 7 16 12 23 17 23 7" />
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                </svg>
+              </div>
+              <h3 className={styles.serviceTitle}>9:16 Commercial Ads</h3>
+              <p className={styles.serviceDesc}>High-converting vertical commercials designed for maximum first-3-second retention.</p>
+            </div>
+
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <h3 className={styles.serviceTitle}>Brand Sales Campaigns</h3>
+              <p className={styles.serviceDesc}>Promotional video assets tailored to accelerate customer acquisition and product sales.</p>
+            </div>
+
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                </svg>
+              </div>
+              <h3 className={styles.serviceTitle}>Editing & Sound Design</h3>
+              <p className={styles.serviceDesc}>Precision color grading, dynamic pacing, keyframe transitions, and custom audio layers.</p>
+            </div>
           </div>
         </section>
 
