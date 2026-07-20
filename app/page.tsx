@@ -97,17 +97,6 @@ export default function Home() {
               <h3 className={styles.serviceTitle}>Cinematic Stock Photos</h3>
               <p className={styles.serviceDesc}>Ultra-high-resolution automotive photography, aerial drone angles, and premium stock visuals.</p>
             </div>
-
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polygon points="23 7 16 12 23 17 23 7" />
-                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                </svg>
-              </div>
-              <h3 className={styles.serviceTitle}>Social Sales Campaigns</h3>
-              <p className={styles.serviceDesc}>Custom 9:16 vertical video assets engineered to drive customer engagement and boost dealership sales.</p>
-            </div>
           </div>
         </section>
 
