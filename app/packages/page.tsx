@@ -120,6 +120,7 @@ export default function Packages() {
   // Camera upgrade states
   const [cameraUpgradeToggled, setCameraUpgradeToggled] = useState<boolean>(false);
   const [cameraUpgradeCount, setCameraUpgradeCount] = useState<number>(0);
+  const [comments, setComments] = useState<string>('');
 
   const handleToggleAddOn = (id: number) => {
     setSelectedAddOns((prev) =>
@@ -165,6 +166,11 @@ export default function Packages() {
       });
     }
     text += `\n*Total Estimated Price:* ₹${totalCost.toLocaleString('en-IN')}\n\n`;
+    
+    if (comments.trim()) {
+      text += `*Special Requests / Notes:*\n${comments.trim()}\n\n`;
+    }
+    
     text += `Please share more details on availability and scheduling.`;
     
     return `https://wa.me/919977994060?text=${encodeURIComponent(text)}`;
@@ -404,6 +410,21 @@ export default function Packages() {
                   </div>
                 )}
                 
+                {/* Custom Booking Comments Section */}
+                <div className={styles.commentSection}>
+                  <label htmlFor="booking-comments" className={styles.commentLabel}>
+                    Special Requests / Notes
+                  </label>
+                  <textarea
+                    id="booking-comments"
+                    value={comments}
+                    onChange={(e) => setComments(e.target.value)}
+                    placeholder="Preferred dates, locations, or special requests..."
+                    className={styles.commentInput}
+                    rows={3}
+                  />
+                </div>
+
                 <div className={styles.summaryDivider} />
                 
                 <div className={styles.totalLine}>
