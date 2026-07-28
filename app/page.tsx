@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { videos } from '../data/videos';
 import { VideoItem } from '../types';
 import VideoCard from '../components/VideoCard';
@@ -19,10 +20,16 @@ export default function Home() {
       {/* Navigation Header */}
       <header className={styles.navHeader}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
-          <div className={styles.logoSlot}>
-            <img src="/logo.png" alt="Apisomi Logo" className={styles.logoImage} />
-          </div>
-          <div className={styles.socialNav}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <div className={styles.logoSlot}>
+              <img src="/logo.png" alt="Apisomi Logo" className={styles.logoImage} />
+            </div>
+          </Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <Link href="/packages" className={styles.headerLink}>
+              Packages
+            </Link>
+            <div className={styles.socialNav}>
             <a
               href="mailto:hello@apisomi.com"
               className={styles.socialLink}
@@ -55,6 +62,7 @@ export default function Home() {
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
             </a>
+          </div>
           </div>
         </div>
       </header>

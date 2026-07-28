@@ -60,5 +60,15 @@ export const videos: VideoItem[] = [
     "id": "12",
     "videoUrl": "/videos/video_9.mp4",
     "posterUrl": "/thumbnails/thumb_12.jpg"
+  },
+  {
+    "id": "13",
+    "videoUrl": "/videos/video_13.mp4",
+    "posterUrl": "/thumbnails/thumb_13.png"
+  },
+  {
+    "id": "14",
+    "videoUrl": "/videos/video_14.mp4",
+    "posterUrl": "/thumbnails/thumb_14.png"
   }
 ];

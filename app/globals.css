@@ -1,26 +1,30 @@
 /* Define core design system tokens in root */
 :root {
-  --background: #050505;
-  --surface: #0e0e11;
-  --surface-hover: #16161c;
+  --background: #000000;
+  --surface: #0a0a0c;
+  --surface-hover: #121215;
   --surface-border: rgba(255, 255, 255, 0.08);
-  --surface-border-hover: rgba(255, 255, 255, 0.15);
+  --surface-border-hover: rgba(255, 204, 0, 0.2);
   
-  --text-primary: #f5f5f7;
+  --text-primary: #ffffff;
   --text-secondary: #a1a1a6;
-  --text-muted: #86868b;
+  --text-muted: #66666e;
   
-  /* Vibrant Neon Accents */
-  --accent-purple: #8b5cf6;
-  --accent-cyan: #06b6d4;
-  --accent-pink: #ec4899;
-  --accent-gradient: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
+  /* Brand Guidelines Colours */
+  --brand-yellow: #FFCC00;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+
+  --accent-purple: #FFCC00;
+  --accent-cyan: #ffffff;
+  --accent-pink: #FFCC00;
+  --accent-gradient: linear-gradient(135deg, var(--brand-yellow), #ffe066);
   
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.8);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.9);
   
-  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: var(--font-poppins), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
 
@@ -86,7 +90,7 @@ body {
   left: 25%;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(236, 72, 153, 0.03) 50%, transparent 100%);
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.04) 0%, rgba(255, 204, 0, 0.01) 60%, transparent 100%);
   z-index: -1;
   pointer-events: none;
   animation: pulse-slow 8s ease-in-out infinite;
@@ -98,7 +102,7 @@ body {
   right: 15%;
   width: 40vw;
   height: 40vw;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.06) 0%, rgba(139, 92, 246, 0.02) 60%, transparent 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(255, 204, 0, 0.005) 60%, transparent 100%);
   z-index: -1;
   pointer-events: none;
   animation: pulse-slow 12s ease-in-out infinite alternate;

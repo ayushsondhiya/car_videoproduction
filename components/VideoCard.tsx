@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { VideoItem } from '../types';
 import styles from './VideoCard.module.css';
 
@@ -11,7 +11,6 @@ interface VideoCardProps {
 
 export default function VideoCard({ video, onSelect }: VideoCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleMouseEnter = async () => {
     if (videoRef.current) {
@@ -19,7 +18,6 @@ export default function VideoCard({ video, onSelect }: VideoCardProps) {
         videoRef.current.muted = true;
         videoRef.current.currentTime = 0;
         await videoRef.current.play();
-        setIsPlaying(true);
       } catch (err) {
         console.debug('Autoplay preview was interrupted:', err);
       }
@@ -34,7 +32,6 @@ export default function VideoCard({ video, onSelect }: VideoCardProps) {
       } catch (err) {
         // ignore seek errors
       }
-      setIsPlaying(false);
     }
   };
 
@@ -56,26 +53,15 @@ export default function VideoCard({ video, onSelect }: VideoCardProps) {
       aria-label="Play video"
     >
       <div className={styles.mediaContainer}>
-        {/* Instant high-res poster image */}
-        <img
-          src={video.posterUrl}
-          alt="Video thumbnail"
-          className={styles.posterImage}
-          loading="lazy"
-          style={{ opacity: isPlaying ? 0 : 1 }}
-        />
-
-        {/* Hover Autoplay Video */}
+        {/* Dynamic Video Element - preload="metadata" renders the first frame as cover */}
         <video
           ref={videoRef}
           src={video.videoUrl}
-          poster={video.posterUrl}
           className={styles.previewVideo}
           loop
           muted
           playsInline
-          preload="none"
-          style={{ opacity: isPlaying ? 1 : 0 }}
+          preload="metadata"
         />
       </div>
 
