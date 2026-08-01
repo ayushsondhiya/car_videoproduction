@@ -19,22 +19,49 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
-  border-bottom: 2px solid var(--surface-border);
+  border-bottom: 2px solid var(--surface-secondary);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: 1000;
-  background: rgba(5, 5, 5, 0.85);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(13, 13, 13, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .logoSlot {
   display: flex;
   align-items: center;
+  gap: 12px;
   height: 40px;
 }
 
 .logoImage {
   max-height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoSeparator {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  font-weight: 300;
+  user-select: none;
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.apisomiNavLogoLink {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.apisomiNavLogoLink:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.apisomiNavLogo {
+  max-height: 28px;
   width: auto;
   object-fit: contain;
 }
@@ -47,16 +74,16 @@
   letter-spacing: 0.5px;
   padding: 8px 16px;
   border-radius: 0;
-  background: rgba(255, 204, 0, 0.05);
-  border: 2px solid rgba(255, 204, 0, 0.15);
+  background: rgba(198, 255, 0, 0.08);
+  border: 2px solid rgba(198, 255, 0, 0.25);
   transition: all 0.2s ease;
 }
 
 .headerLink:hover {
-  background: var(--brand-yellow);
+  background: var(--brand-lime);
   color: var(--brand-black);
-  border-color: var(--brand-yellow);
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.25);
+  border-color: var(--brand-lime);
+  box-shadow: 0 0 15px rgba(198, 255, 0, 0.3);
   transform: translateY(-1px);
 }
 
@@ -80,8 +107,9 @@
 }
 
 .socialLink:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--brand-lime);
+  background: rgba(198, 255, 0, 0.12);
+  border-color: rgba(198, 255, 0, 0.3);
   transform: translateY(-2px);
 }
 
@@ -138,8 +166,8 @@
 
 .packageCard {
   position: relative;
-  background: rgba(18, 18, 22, 0.55);
-  border: 2px solid var(--surface-border);
+  background: var(--surface);
+  border: 2px solid var(--surface-secondary);
   border-radius: 0;
   padding: 28px 32px;
   cursor: pointer;
@@ -149,32 +177,32 @@
 }
 
 .packageCard:hover {
-  background: rgba(25, 25, 30, 0.7);
-  border-color: rgba(255, 204, 0, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: var(--surface-secondary);
+  border-color: rgba(198, 255, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .popularCard {
-  border-color: rgba(255, 204, 0, 0.3);
-  background: rgba(20, 20, 25, 0.6);
+  border-color: rgba(198, 255, 0, 0.4);
+  background: var(--surface);
 }
 
 .bestValueCard {
-  border-color: rgba(255, 204, 0, 0.3);
-  background: rgba(20, 20, 25, 0.6);
+  border-color: rgba(198, 255, 0, 0.4);
+  background: var(--surface);
 }
 
 .selectedCard {
-  background: rgba(25, 25, 30, 0.85);
-  border-color: var(--brand-yellow) !important;
-  box-shadow: 0 12px 40px rgba(255, 204, 0, 0.12) !important;
+  background: var(--surface-secondary);
+  border-color: var(--brand-lime) !important;
+  box-shadow: 0 12px 40px rgba(198, 255, 0, 0.15) !important;
 }
 
 .popularBadge, .bestValueBadge {
   position: absolute;
   top: -14px;
   left: 28px;
-  background: var(--brand-yellow);
+  background: var(--brand-lime);
   color: var(--brand-black);
   font-size: 0.72rem;
   font-weight: 800;
@@ -182,15 +210,15 @@
   letter-spacing: 1px;
   padding: 4px 12px;
   border-radius: 0;
-  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
-  border: 1px solid var(--brand-yellow);
+  box-shadow: 0 4px 12px rgba(198, 255, 0, 0.3);
+  border: 1px solid var(--brand-lime);
 }
 
 .bestValueBadge {
-  background: #3399ff;
-  color: #ffffff;
-  border-color: #3399ff;
-  box-shadow: 0 4px 12px rgba(51, 153, 255, 0.3);
+  background: var(--brand-lime);
+  color: var(--brand-black);
+  border-color: var(--brand-lime);
+  box-shadow: 0 4px 12px rgba(198, 255, 0, 0.3);
 }
 
 .cardHeader {
@@ -217,7 +245,7 @@
 
 .selectedCard .packageName,
 .selectedCard .packagePrice {
-  color: var(--brand-yellow);
+  color: var(--brand-lime);
 }
 
 .packageSubtitleText {
@@ -246,7 +274,7 @@
 }
 
 .checkIcon {
-  color: var(--brand-yellow);
+  color: var(--brand-lime);
   flex-shrink: 0;
   margin-top: 4px;
 }
@@ -271,15 +299,15 @@
 }
 
 .packageCard:hover .selectButton {
-  border-color: var(--brand-yellow);
-  color: var(--brand-yellow);
+  border-color: var(--brand-lime);
+  color: var(--brand-lime);
 }
 
 .selectedButtonActive {
-  background: var(--brand-yellow) !important;
-  border-color: var(--brand-yellow) !important;
+  background: var(--brand-lime) !important;
+  border-color: var(--brand-lime) !important;
   color: var(--brand-black) !important;
-  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(198, 255, 0, 0.25);
 }
 
 /* Calculator Section Layout */
@@ -318,16 +346,16 @@
 
 /* Camera Upgrade Box */
 .cameraUpgradeBox {
-  background: rgba(15, 15, 18, 0.5);
-  border: 2px solid var(--surface-border);
+  background: var(--surface);
+  border: 2px solid var(--surface-secondary);
   border-radius: 0;
   padding: 24px;
   margin-bottom: 10px;
 }
 
 .cameraCounterCard {
-  background: rgba(255, 255, 255, 0.02);
-  border: 2px solid rgba(255, 255, 255, 0.05);
+  background: var(--surface-near-black);
+  border: 2px solid var(--surface-secondary);
   border-radius: 0;
   padding: 20px;
   display: flex;
@@ -345,10 +373,10 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--surface);
   padding: 6px 14px;
   border-radius: 0;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--surface-secondary);
 }
 
 .counterButton {
@@ -368,9 +396,9 @@
 }
 
 .counterButton:hover:not(:disabled) {
-  background: var(--brand-yellow);
+  background: var(--brand-lime);
   color: var(--brand-black);
-  border-color: var(--brand-yellow);
+  border-color: var(--brand-lime);
 }
 
 .counterButton:disabled {
@@ -390,7 +418,7 @@
 .counterPriceTag {
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--brand-yellow);
+  color: var(--brand-lime);
   margin-left: 6px;
 }
 
@@ -399,8 +427,8 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: start;
-  background: rgba(18, 18, 22, 0.45);
-  border: 2px solid var(--surface-border);
+  background: var(--surface);
+  border: 2px solid var(--surface-secondary);
   border-radius: 0;
   padding: 20px 24px;
   cursor: pointer;
@@ -409,14 +437,14 @@
 }
 
 .addOnCard:hover {
-  background: rgba(25, 25, 30, 0.6);
-  border-color: rgba(255, 204, 0, 0.3);
+  background: var(--surface-secondary);
+  border-color: rgba(198, 255, 0, 0.4);
 }
 
 .addOnCardSelected {
-  background: rgba(255, 204, 0, 0.02);
-  border-color: var(--brand-yellow);
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.05);
+  background: rgba(198, 255, 0, 0.04);
+  border-color: var(--brand-lime);
+  box-shadow: 0 0 20px rgba(198, 255, 0, 0.1);
 }
 
 .checkboxWrapper {
@@ -440,8 +468,8 @@
 }
 
 .addOnCardSelected .customCheckbox {
-  border-color: var(--brand-yellow);
-  background: var(--brand-yellow);
+  border-color: var(--brand-lime);
+  background: var(--brand-lime);
 }
 
 .addOnDetails {
@@ -471,7 +499,7 @@
 
 .addOnCardSelected .addOnName,
 .addOnCardSelected .addOnPrice {
-  color: var(--brand-yellow);
+  color: var(--brand-lime);
 }
 
 /* Sticky Booking Summary Widget */
@@ -482,11 +510,11 @@
 }
 
 .summaryCard {
-  background: rgba(12, 12, 15, 0.85);
-  border: 2px solid var(--surface-border);
+  background: rgba(13, 13, 13, 0.95);
+  border: 2px solid var(--surface-secondary);
   border-radius: 0;
   padding: 32px;
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
 }
@@ -497,7 +525,7 @@
   font-weight: 700;
   color: var(--text-primary);
   margin: 0 0 24px 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 2px solid var(--surface-secondary);
   padding-bottom: 12px;
   text-transform: uppercase;
 }
@@ -528,7 +556,7 @@
   gap: 12px;
   margin-top: 12px;
   padding-left: 12px;
-  border-left: 2px solid rgba(255, 255, 255, 0.06);
+  border-left: 2px solid var(--surface-secondary);
 }
 
 .summaryLineSub {
@@ -549,7 +577,7 @@
 
 .summaryDivider {
   height: 2px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface-secondary);
   margin: 24px 0;
 }
 
@@ -571,15 +599,15 @@
   font-family: var(--font-poppins), sans-serif;
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--brand-yellow);
-  text-shadow: 0 0 20px rgba(255, 204, 0, 0.35);
+  color: var(--brand-lime);
+  text-shadow: 0 0 20px rgba(198, 255, 0, 0.35);
 }
 
 .bookingCTA {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--brand-yellow);
+  background: var(--brand-lime);
   color: var(--brand-black);
   border-radius: 0;
   padding: 16px 24px;
@@ -587,18 +615,18 @@
   font-weight: 800;
   text-decoration: none;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 20px rgba(255, 204, 0, 0.25);
+  box-shadow: 0 4px 20px rgba(198, 255, 0, 0.25);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border: 2px solid var(--brand-yellow);
+  border: 2px solid var(--brand-lime);
 }
 
 .bookingCTA:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 204, 0, 0.45);
-  background: #ffe066;
-  border-color: #ffe066;
+  box-shadow: 0 8px 30px rgba(198, 255, 0, 0.45);
+  background: var(--brand-lime-hover);
+  border-color: var(--brand-lime-hover);
 }
 
 .ctaFootnote {
@@ -612,9 +640,9 @@
 /* Footer styling */
 .footer {
   margin-top: auto;
-  border-top: 2px solid var(--surface-border);
+  border-top: 2px solid var(--surface-secondary);
   padding: 40px 0;
-  background-color: #030305;
+  background-color: var(--surface-near-black);
 }
 
 .footerContent {
@@ -634,11 +662,35 @@
 .footerLogoSlot {
   display: flex;
   align-items: center;
+  gap: 14px;
   height: 36px;
 }
 
 .footerLogoImage {
   max-height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footerLogoDivider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--surface-secondary);
+}
+
+.footerApisomiLink {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footerApisomiLink:hover {
+  transform: translateY(-1px);
+  opacity: 0.85;
+}
+
+.footerApisomiLogoImage {
+  max-height: 26px;
   width: auto;
   object-fit: contain;
 }
@@ -660,7 +712,7 @@
 }
 
 .contactTextLink:hover {
-  color: var(--text-primary);
+  color: var(--brand-lime);
 }
 
 .contactDivider {
@@ -691,8 +743,8 @@
 }
 
 .commentInput {
-  background: rgba(0, 0, 0, 0.45);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: var(--surface-near-black);
+  border: 2px solid var(--surface-secondary);
   border-radius: 0;
   color: var(--text-primary);
   padding: 12px;
@@ -705,7 +757,7 @@
 }
 
 .commentInput:focus {
-  border-color: var(--brand-yellow);
+  border-color: var(--brand-lime);
 }
 
 /* Responsive & Mobile Adaptation Styles */

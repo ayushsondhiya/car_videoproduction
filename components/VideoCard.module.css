@@ -9,15 +9,17 @@
   border: 2px solid var(--surface-border);
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
               box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
-              border-color 0.4s ease;
+              border-color 0.4s ease,
+              background-color 0.4s ease;
   will-change: transform, box-shadow;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 204, 0, 0.4);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
-              0 0 30px rgba(255, 204, 0, 0.15);
+  background-color: var(--surface-secondary);
+  border-color: rgba(198, 255, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8),
+              0 0 30px rgba(198, 255, 0, 0.2);
 }
 
 .mediaContainer {
@@ -46,10 +48,10 @@
   transform: translate(-50%, -50%) scale(0.9);
   width: 56px;
   height: 56px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(13, 13, 13, 0.7);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 2px solid rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(198, 255, 0, 0.4);
   border-radius: 0;
   display: flex;
   align-items: center;
@@ -57,13 +59,16 @@
   opacity: 0;
   z-index: 3;
   transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-              transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+              transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+              border-color 0.3s ease,
+              background-color 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
 .card:hover .playOverlay {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+  background: var(--brand-lime);
 }
 
 .playIcon {
@@ -73,6 +78,11 @@
   border-width: 10px 0 10px 16px;
   border-color: transparent transparent transparent var(--text-primary);
   margin-left: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.card:hover .playIcon {
+  border-color: transparent transparent transparent var(--brand-black);
 }
 
 /* User preference for reduced motion */

@@ -10,8 +10,13 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Apisomi | Visual Portfolio",
-  description: "Apisomi visual portfolio gallery.",
+  title: "Drive Out | Automotive Video Production by Apisomi",
+  description: "Drive Out by Apisomi - High-impact consumer video production, car delivery reels, and automotive visual media.",
+  icons: {
+    icon: "/drive_out_logo.png",
+    shortcut: "/drive_out_logo.png",
+    apple: "/drive_out_logo.png",
+  },
 };
 
 export default function RootLayout({

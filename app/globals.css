@@ -1,24 +1,33 @@
 /* Define core design system tokens in root */
 :root {
+  /* Dominant */
   --background: #000000;
-  --surface: #0a0a0c;
-  --surface-hover: #121215;
-  --surface-border: rgba(255, 255, 255, 0.08);
-  --surface-border-hover: rgba(255, 204, 0, 0.2);
+  --surface-near-black: #0D0D0D;
   
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1a6;
-  --text-muted: #66666e;
+  /* Neutral: Asphalt Grey */
+  --surface: #1A1A1A;
+  --surface-secondary: #2B2B2B;
+  --surface-hover: #252525;
+  --surface-border: rgba(255, 255, 255, 0.1);
+  --surface-border-hover: rgba(198, 255, 0, 0.4);
   
-  /* Brand Guidelines Colours */
-  --brand-yellow: #FFCC00;
+  /* Text / Contrast */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1A6;
+  --text-muted: #66666E;
+  
+  /* Accent: Lime */
+  --brand-lime: #C6FF00;
+  --brand-lime-hover: #B2E600;
   --brand-black: #000000;
-  --brand-white: #ffffff;
+  --brand-near-black: #0D0D0D;
+  --brand-asphalt: #1A1A1A;
+  --brand-asphalt-light: #2B2B2B;
+  --brand-white: #FFFFFF;
 
-  --accent-purple: #FFCC00;
-  --accent-cyan: #ffffff;
-  --accent-pink: #FFCC00;
-  --accent-gradient: linear-gradient(135deg, var(--brand-yellow), #ffe066);
+  --accent-lime: #C6FF00;
+  --accent-gradient: linear-gradient(135deg, var(--brand-lime), #D9FF4D);
+  --shadow-lime: 0 0 20px rgba(198, 255, 0, 0.35);
   
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.8);
@@ -58,12 +67,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(198, 255, 0, 0.25);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--brand-lime);
 }
 
 /* Utility Animations */
@@ -90,7 +99,7 @@ body {
   left: 25%;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(255, 204, 0, 0.04) 0%, rgba(255, 204, 0, 0.01) 60%, transparent 100%);
+  background: radial-gradient(circle, rgba(198, 255, 0, 0.05) 0%, rgba(198, 255, 0, 0.01) 60%, transparent 100%);
   z-index: -1;
   pointer-events: none;
   animation: pulse-slow 8s ease-in-out infinite;
@@ -102,7 +111,7 @@ body {
   right: 15%;
   width: 40vw;
   height: 40vw;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(255, 204, 0, 0.005) 60%, transparent 100%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, rgba(198, 255, 0, 0.01) 60%, transparent 100%);
   z-index: -1;
   pointer-events: none;
   animation: pulse-slow 12s ease-in-out infinite alternate;
@@ -129,6 +138,6 @@ a, button {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid var(--accent-purple);
+  outline: 2px solid var(--brand-lime);
   outline-offset: 4px;
 }

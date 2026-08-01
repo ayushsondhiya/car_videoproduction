@@ -82,8 +82,9 @@
 }
 
 .globalCloseBtn:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: var(--brand-lime);
+  border-color: var(--brand-lime);
+  color: var(--brand-black);
   transform: scale(1.05);
 }
 
@@ -134,14 +135,14 @@
   height: 90vh;
   max-height: 90vh;
   aspect-ratio: 9 / 16;
-  background-color: #000;
+  background-color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
   border-radius: 0;
-  border: 2px solid var(--surface-border);
+  border: 2px solid var(--surface-secondary);
 }
 
 .videoElement {
@@ -203,8 +204,8 @@
   width: 12px;
   height: 12px;
   border-radius: 0;
-  background: var(--accent-purple);
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+  background: var(--brand-lime);
+  box-shadow: 0 0 10px rgba(198, 255, 0, 0.8);
   cursor: pointer;
   transition: transform 0.1s ease;
 }
@@ -218,8 +219,8 @@
   height: 12px;
   border: none;
   border-radius: 0;
-  background: var(--accent-purple);
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+  background: var(--brand-lime);
+  box-shadow: 0 0 10px rgba(198, 255, 0, 0.8);
   cursor: pointer;
   transition: transform 0.1s ease;
 }

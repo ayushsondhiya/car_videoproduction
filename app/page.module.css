@@ -18,22 +18,49 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
-  border-bottom: 1px solid var(--surface-border);
+  border-bottom: 2px solid var(--surface-secondary);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: 1000;
-  background: rgba(5, 5, 5, 0.85);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(13, 13, 13, 0.85);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .logoSlot {
   display: flex;
   align-items: center;
+  gap: 12px;
   height: 40px;
 }
 
 .logoImage {
   max-height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoSeparator {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  font-weight: 300;
+  user-select: none;
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.apisomiNavLogoLink {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.apisomiNavLogoLink:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.apisomiNavLogo {
+  max-height: 28px;
   width: auto;
   object-fit: contain;
 }
@@ -46,16 +73,16 @@
   letter-spacing: 0.5px;
   padding: 8px 16px;
   border-radius: 0;
-  background: rgba(255, 204, 0, 0.05);
-  border: 2px solid rgba(255, 204, 0, 0.15);
+  background: rgba(198, 255, 0, 0.08);
+  border: 2px solid rgba(198, 255, 0, 0.25);
   transition: all 0.2s ease;
 }
 
 .headerLink:hover {
-  background: var(--brand-yellow);
+  background: var(--brand-lime);
   color: var(--brand-black);
-  border-color: var(--brand-yellow);
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.25);
+  border-color: var(--brand-lime);
+  box-shadow: 0 0 15px rgba(198, 255, 0, 0.3);
   transform: translateY(-1px);
 }
 
@@ -78,8 +105,9 @@
 }
 
 .socialLink:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--brand-lime);
+  background: rgba(198, 255, 0, 0.12);
+  border-color: rgba(198, 255, 0, 0.3);
   transform: translateY(-2px);
 }
 
@@ -114,32 +142,34 @@
 }
 
 .serviceCard {
-  background: rgba(255, 255, 255, 0.02);
-  border: 2px solid var(--surface-border);
+  background: var(--surface);
+  border: 2px solid var(--surface-secondary);
   border-radius: 0;
   padding: 20px 16px;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .serviceCard:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 204, 0, 0.4);
-  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(198, 255, 0, 0.5);
+  background: var(--surface-secondary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .serviceIcon {
-  color: var(--accent-purple);
+  color: var(--brand-lime);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 36px;
   height: 36px;
   border-radius: 0;
-  background: rgba(255, 204, 0, 0.15);
+  background: rgba(198, 255, 0, 0.12);
+  border: 1px solid rgba(198, 255, 0, 0.2);
   margin-bottom: 4px;
 }
 
@@ -176,9 +206,9 @@
 /* Footer styles */
 .footer {
   margin-top: auto;
-  border-top: 1px solid var(--surface-border);
+  border-top: 2px solid var(--surface-secondary);
   padding: 40px 0;
-  background-color: #030305;
+  background-color: var(--surface-near-black);
 }
 
 .footerContent {
@@ -229,11 +259,35 @@
 .footerLogoSlot {
   display: flex;
   align-items: center;
+  gap: 14px;
   height: 36px;
 }
 
 .footerLogoImage {
   max-height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footerLogoDivider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--surface-secondary);
+}
+
+.footerApisomiLink {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footerApisomiLink:hover {
+  transform: translateY(-1px);
+  opacity: 0.85;
+}
+
+.footerApisomiLogoImage {
+  max-height: 26px;
   width: auto;
   object-fit: contain;
 }

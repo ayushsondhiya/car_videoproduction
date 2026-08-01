@@ -185,23 +185,21 @@ export default function Packages() {
       {/* Navigation Header */}
       <header className={styles.navHeader}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <div className={styles.logoSlot}>
-              <img src="/logo.png" alt="Apisomi Logo" className={styles.logoImage} />
-            </div>
-          </Link>
+          <div className={styles.logoSlot}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+              <img src="/drive_out_logo.png" alt="Drive Out Logo" className={styles.logoImage} />
+            </Link>
+            <span className={styles.logoSeparator}>|</span>
+            <a href="https://www.apisomi.com" target="_blank" rel="noopener noreferrer" className={styles.apisomiNavLogoLink} title="Visit Apisomi">
+              <img src="/apisomi_logo.png" alt="Apisomi Logo" className={styles.apisomiNavLogo} />
+            </a>
+          </div>
           <nav style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <Link href="/" className={styles.headerLink}>
               Portfolio
             </Link>
             <div className={styles.socialNav}>
-              <a href="mailto:hello@apisomi.com" className={styles.socialLink} aria-label="Email Apisomi">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
-              </a>
-              <a href="https://www.instagram.com/apisomi_global/" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Apisomi Instagram profile">
+              <a href="https://www.instagram.com/driveout_india?igsh=MW1iN2Q1ZzJnMXk0aw==" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="Drive Out Instagram profile">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <path d="M16 11.37A4.000 4.000 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -457,7 +455,11 @@ export default function Packages() {
           <div className={styles.footerContent}>
             <div className={styles.footerBrand}>
               <div className={styles.footerLogoSlot}>
-                <img src="/logo.png" alt="Apisomi Logo" className={styles.footerLogoImage} />
+                <img src="/drive_out_logo.png" alt="Drive Out Logo" className={styles.footerLogoImage} />
+                <span className={styles.footerLogoDivider}></span>
+                <a href="https://www.apisomi.com" target="_blank" rel="noopener noreferrer" className={styles.footerApisomiLink} title="Visit Apisomi">
+                  <img src="/apisomi_logo.png" alt="Apisomi Logo" className={styles.footerApisomiLogoImage} />
+                </a>
               </div>
               <p className={styles.copyright}>
                 &copy; 2026 Apisomi. All rights reserved.
