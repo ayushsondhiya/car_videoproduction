@@ -40,3 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /hostinger_deploy_public_html.zip
+/hostinger_public_html.zip
+*.zip

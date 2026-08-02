@@ -329,6 +329,11 @@
 
 /* Responsive adjustments for phones */
 @media (max-width: 600px) {
+  .dialog {
+    max-width: 96vw;
+    max-height: 88vh;
+  }
+  
   .videoSection {
     height: 82vh;
     max-height: 82vh;
@@ -341,5 +346,12 @@
   .globalCloseBtn {
     top: 10px;
     right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .globalCloseBtn svg {
+    width: 18px;
+    height: 18px;
   }
 }

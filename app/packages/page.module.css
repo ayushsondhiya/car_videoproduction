@@ -4,8 +4,12 @@
   display: flex;
   flex-direction: column;
   background-color: var(--background);
-  padding-top: 86px;
   font-family: var(--font-poppins), sans-serif;
+}
+
+.mainContainer {
+  padding-top: 110px;
+  padding-bottom: 80px;
 }
 
 /* Fixed Header */
@@ -18,13 +22,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 14px 0;
   border-bottom: 2px solid var(--surface-secondary);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: 1000;
   background: rgba(13, 13, 13, 0.85);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.navControls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .logoSlot {
@@ -77,6 +95,7 @@
   background: rgba(198, 255, 0, 0.08);
   border: 2px solid rgba(198, 255, 0, 0.25);
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .headerLink:hover {
@@ -90,7 +109,7 @@
 .socialNav {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .socialLink {
@@ -104,6 +123,7 @@
   background: rgba(255, 255, 255, 0.03);
   border: 2px solid rgba(255, 255, 255, 0.05);
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .socialLink:hover {
@@ -764,7 +784,7 @@
 @media (max-width: 1024px) {
   .calculatorSection {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
   
   .summaryStickyBox {
@@ -773,80 +793,259 @@
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.2rem;
+  .mainContainer {
+    padding-top: 80px;
+    padding-bottom: 50px;
   }
-  
+
+  .navHeader {
+    padding: 10px 0;
+  }
+
+  .headerContainer {
+    gap: 8px;
+  }
+
+  .logoSlot {
+    gap: 8px;
+    height: 34px;
+  }
+
+  .logoImage {
+    max-height: 24px;
+  }
+
+  .logoSeparator {
+    font-size: 0.95rem;
+  }
+
+  .apisomiNavLogo {
+    max-height: 20px;
+  }
+
+  .navControls {
+    gap: 8px;
+  }
+
+  .headerLink {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    border-width: 1.5px;
+  }
+
+  .socialNav {
+    gap: 6px;
+  }
+
+  .socialLink {
+    width: 32px;
+    height: 32px;
+    border-width: 1.5px;
+  }
+
+  .socialLink svg {
+    width: 15px;
+    height: 15px;
+  }
+
   .introHero {
-    padding: 30px 16px 20px;
+    padding: 20px 8px 16px;
   }
-  
-  .tableTitle {
+
+  .title {
     font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .tableTitle {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .calculatorSubTitle {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .calculatorDesc {
+    font-size: 0.85rem;
     margin-bottom: 16px;
   }
-  
+
   .packageName {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
-  
+
   .packagePrice {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
-  
+
   .packageCard {
-    padding: 20px 24px;
+    padding: 20px 18px;
   }
-  
+
+  .popularBadge, .bestValueBadge {
+    top: -11px;
+    left: 18px;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .featureItem {
+    font-size: 0.88rem;
+    gap: 8px;
+  }
+
+  .cameraUpgradeBox {
+    padding: 16px 14px;
+  }
+
   .addOnCard {
-    padding: 16px 20px;
+    padding: 14px 16px;
+    gap: 12px;
   }
-  
+
+  .addOnName {
+    font-size: 0.98rem;
+  }
+
+  .addOnDesc {
+    font-size: 0.82rem;
+  }
+
+  .addOnPrice {
+    font-size: 1.1rem;
+  }
+
   .cameraCounterCard {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 14px;
+    padding: 14px;
   }
-  
+
   .counterControlWrapper {
     width: 100%;
     justify-content: space-between;
   }
-  
+
   .summaryCard {
-    padding: 20px;
+    padding: 20px 16px;
   }
-  
+
+  .summaryTitle {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+  }
+
+  .totalValue {
+    font-size: 1.6rem;
+  }
+
+  .bookingCTA {
+    padding: 13px 16px;
+    font-size: 0.9rem;
+  }
+
   .footerContent {
     flex-direction: column;
     text-align: center;
-    gap: 16px;
+    gap: 14px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
+  .mainContainer {
+    padding-top: 72px;
+    padding-bottom: 40px;
+  }
+
+  .logoSlot {
+    gap: 6px;
+  }
+
+  .logoImage {
+    max-height: 21px;
+  }
+
+  .apisomiNavLogo {
+    max-height: 17px;
+  }
+
+  .headerLink {
+    padding: 5px 10px;
+    font-size: 0.78rem;
+  }
+
+  .socialLink {
+    width: 30px;
+    height: 30px;
+  }
+
+  .socialLink svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
   .cardHeader {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     gap: 8px;
   }
-  
+
   .packageCard {
-    padding: 20px;
+    padding: 16px 14px;
   }
-  
+
   .cardFooter {
     width: 100%;
-    margin-top: 16px;
+    margin-top: 14px;
   }
-  
+
   .selectButton {
     width: 100%;
     text-align: center;
+    padding: 8px 12px;
+    font-size: 0.8rem;
   }
 
   .addOnCard {
-    padding: 16px;
-    gap: 12px;
+    padding: 12px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logoSlot {
+    gap: 4px;
+  }
+
+  .logoSeparator {
+    opacity: 0.4;
+    font-size: 0.85rem;
+  }
+
+  .logoImage {
+    max-height: 19px;
+  }
+
+  .apisomiNavLogo {
+    max-height: 15px;
+  }
+
+  .headerLink {
+    padding: 4px 8px;
+    font-size: 0.75rem;
   }
 }
